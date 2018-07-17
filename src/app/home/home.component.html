@@ -1,21 +1,30 @@
 <div class="container-fluid">
-    <nav class="navbar sticky-top row justify-content-start">
-      <ul class="navbar-nav col-lg-2 text-left">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="usuario">
-            <img [src]="usuario.imagenUrl" class="img-thumbnail img-fluid" [width]="50" [height]="50" alt=""> {{ usuario.usuario }}
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Cerrar sesión</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  <div class="row justify-content-center">
+  <nav class="navbar sticky-top row justify-content-start">
+    <ul class="navbar-nav col-lg-12  text-right">
+      <li class="nav-item dropdown">
+        <a class="nav-link " id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false" *ngIf="usuario">
+          <img [src]="usuario.imagenUrl" class="img-thumbnail img-fluid" [width]="50" [height]="50" alt=""> {{
+          usuario.usuario }}
+        </a>
+        <div class="" aria-labelledby="navbarDropdownMenuLink">
+          <a class="blanco" href="#">Cerrar sesión</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="row ">
     <div class="col-sm-8">
       <div class="input-group mb-3">
-        <input type="text" name="busqueda" class="form-control" placeholder="Buscar usuario, autor o libro" aria-label="Busqueda" aria-describedby="Busqueda" #busqueda (keyup)="buscar(busqueda)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
-        <div *ngIf="userSearch || libroSearch || autorSearch " class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <input type="image"
+               src="https://cdn.shopify.com/s/files/1/0171/7374/t/32/assets/icon-search.svg?16119285053991222632"
+               class="image_buscar">
+
+        <input type="text image" name="busqueda" class="form-control" placeholder="Buscar usuario, SO, app "
+               aria-label="Busqueda" aria-describedby="Busqueda" #busqueda (keyup)="buscar(busqueda)"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
+        <div *ngIf="userSearch || libroSearch || autorSearch " class="dropdown-menu"
+             aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#" *ngFor="let user of userSearch">
             {{ user.usuario }} <span class="badge badge-pill badge-primary col-sm-4">Usuario</span>
           </a>
@@ -27,7 +36,7 @@
           </a>
         </div>
         <div class="input-group-append">
-          <button class="btn btn-primary" (click)="buscar(busqueda)" type="button" id="btn-buscar">Buscar</button>
+          <button class="btn text-right" (click)="buscar(busqueda)" type="button" id="btn-buscar">Buscar</button>
         </div>
       </div>
     </div>

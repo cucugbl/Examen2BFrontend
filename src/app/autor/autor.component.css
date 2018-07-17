@@ -6,3 +6,12 @@
 app-autor-detail:hover{
   cursor: pointer;
 }
+
+.fondo{
+  background-image: url(http://tusimagenesde.com/wp-content/uploads/2016/07/fondo-blanco-1.gif);
+
+  -webkit-background-size: 100% 100%;           /* Safari 3.0 */
+  -moz-background-size: 100% 100%;           /* Gecko 1.9.2 (Firefox 3.6) */
+  -o-background-size: 100% 100%;           /* Opera 9.5 */
+  background-size: 100% 100%;
+}
